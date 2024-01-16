@@ -7,7 +7,7 @@
 
     public function getgentoy()
     {
-        $result = $this->Name . "<br> " . $this->Type . "<br> " .  $this->Material . "<br> " .  $this->Price . "<br><br>";
+        $result = $this->Name . "<br> " . $this->Type . "<br> " .  $this->Material . "<br> " .  $this->Price ."<br>";
         return $result;
     }
 
@@ -28,8 +28,13 @@
         parent::__construct($Nome, $Tipo, $Materiale, $Prezzo);
         $this->Suitable = $Adatto;
     }
-}
-?>
+    public function getgentoy()
+    {
+        $Fathertoyinfo = parent::getgentoy();
+        $result = $Fathertoyinfo . $this->Suitable . "<br><br>";
+        return $result;
+    }
+} ?>
 <?php class Giochi_Per_Gatti extends Giochi_Generici
 {
     public $Suitable;
@@ -37,6 +42,12 @@
     {
         parent::__construct($Nome, $Tipo, $Materiale, $Prezzo);
         $this->Suitable = $Adatto;
+    }
+    public function getgentoy()
+    {
+        $Fathertoyinfo = parent::getgentoy();
+        $result = $Fathertoyinfo . $this->Suitable . "<br><br>";
+        return $result;
     }
 } ?>
 
@@ -50,7 +61,7 @@
 
         public function getfood()
         {
-            $result = $this->Type . "<br> " . $this->Company . "<br> " .  $this->Ingredients . "<br> " .  $this->Price . "<br><br>";
+            $result = $this->Type . "<br> " . $this->Company . "<br> " .  $this->Ingredients . "<br> " .  $this->Price . "<br>";
             return $result;
         }
 
@@ -66,17 +77,31 @@
 <?php class Cibo_Per_Cani extends Cibo_Per_Animali
 {
     public $For;
-    public function __construct($Nome, $Marca, $Ingredienti,$Prezzo, $Adatto)
-    {   parent::__construct($Nome, $Marca, $Ingredienti,$Prezzo);
+    public function __construct($Nome, $Marca, $Ingredienti, $Prezzo, $Adatto)
+    {
+        parent::__construct($Nome, $Marca, $Ingredienti, $Prezzo);
         $this->For = $Adatto;
+    }
+    public function getfood()
+    {
+        $Fatherfoodinfo = parent::getfood();
+        $result = $Fatherfoodinfo . $this->For . "<br><br>";
+        return $result;
     }
 } ?>
 
 <?php class Cibo_Per_Gatti extends Cibo_Per_Animali
 {
     public $For;
-    public function __construct($Nome, $Marca, $Ingredienti,$Prezzo, $Adatto)
-    {   parent::__construct($Nome, $Marca, $Ingredienti,$Prezzo);
+    public function __construct($Nome, $Marca, $Ingredienti, $Prezzo, $Adatto)
+    {
+        parent::__construct($Nome, $Marca, $Ingredienti, $Prezzo);
         $this->For = $Adatto;
+    }
+    public function getfood()
+    {
+        $Fatherfoodinfo = parent::getfood();
+        $result = $Fatherfoodinfo . $this->For . "<br><br>";
+        return $result;
     }
 } ?>

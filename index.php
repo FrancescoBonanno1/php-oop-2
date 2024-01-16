@@ -3,8 +3,10 @@ require __DIR__ . '/metods/data.php';
 $generictoy1 = new Giochi_Generici("Pallina Rimbalzina", "Giocattolo Rimbalzante", "P.L.U.", "3,50$");
 $generictoy2 = new Giochi_Generici("Topolino di pezza", "Giocattolo di Tessuto", "Cotone 100%", "2,50$");
 $generictoy3 = new Giochi_Generici("Pupazzo che scappa", "Giocattolo con carica a molla", "80% tessuto, plastica 20%", "4$");
+
 $dogtoy1 = new Giochi_Per_Cani("Corda Dura", "Corda da tirare", "100% tessuto grezzo", "3,50$", "Adatto a tutti i tipi di Cane");
 $dogtoy2 = new Giochi_Per_Cani("Frisbee","Oggetto circolare da lancio","100% P.E.T.","4,50$","Adatto a tutti i tipi di Cane" );
+
 $cattoy1= new Giochi_Per_Gatti("laser felino", "Laser ricreativo per gatti", "100% autentico fascio di elettroni", "10,90$","Adatto per Tutti i tipi di Gatto");
 $cattoy2= new Giochi_Per_Gatti("Tiragraffi jungle", "Tiragraffi scalabile per gatti", "80% legno di banano, 20% liane delle amazzoni", "25,99$","Adatto per Tutti i tipi di Gatto");
 
