@@ -7,8 +7,12 @@ $generictoy3 = new Giochi_Generici("Pupazzo che scappa", "Giocattolo con carica 
 $dogtoy1 = new Giochi_Per_Cani("Corda Dura", "Corda da tirare", "100% tessuto grezzo", "3,50$", "Adatto a tutti i tipi di Cane");
 $dogtoy2 = new Giochi_Per_Cani("Frisbee","Oggetto circolare da lancio","100% P.E.T.","4,50$","Adatto a tutti i tipi di Cane" );
 
-$cattoy1= new Giochi_Per_Gatti("laser felino", "Laser ricreativo per gatti", "100% autentico fascio di elettroni", "10,90$","Adatto per Tutti i tipi di Gatto");
-$cattoy2= new Giochi_Per_Gatti("Tiragraffi jungle", "Tiragraffi scalabile per gatti", "80% legno di banano, 20% liane delle amazzoni", "25,99$","Adatto per Tutti i tipi di Gatto");
+$cattoy1 = new Giochi_Per_Gatti("laser felino", "Laser ricreativo per gatti", "100% autentico fascio di elettroni", "10,90$","Adatto per Tutti i tipi di Gatto");
+$cattoy2 = new Giochi_Per_Gatti("Tiragraffi jungle", "Tiragraffi scalabile per gatti", "80% legno di banano, 20% liane delle amazzoni", "25,99$","Adatto per Tutti i tipi di Gatto");
+
+$GenFood1 = new Cibo_Per_Animali("Semi di Girasole", "semi commestibili per animali da compagnia", "semi di girasole ed altre piante assortite", "1,90$");
+$GenFood2 = new Cibo_Per_Animali("Croccantini", "Croccantini generici per animali da compagnia", "35%Manzo, 35% Pollo, 30%Frumento", "2,90$");
+$GenFood3 = new Cibo_Per_Animali("Gamberetti", "Mangime vario per animali acquatici", "Gamberetti, fauna microscopica marina assortita", "2$");
 
 $dogf1 = new Cibo_Per_Cani("Polpettine di carne", "Petfood", "60% Manzo, 40% Pollo","2,50$", "Adatto ai cani di taglia Media/Grande");
 $dogf2 = new Cibo_Per_Cani("Bocconcini di pollo", "Friskas", "100% Pollo","4,99$", "Adatto ai cani di taglia Media/Grande");
@@ -44,11 +48,11 @@ $catf3 = new Cibo_Per_Gatti("erba gatta", "Petxyness", "100% Erba gatta","7,50$"
     ?>
 
     <div>
-        <?= "<h2>Cibo Per Cani<h2>" ?>
+        <?= "<h2>Cibo Per Animali<h2>" ?>
     </div>
 
     <?php
-    $GenFood = [$dogf1, $dogf2, $dogf3];
+    $GenFood = [$GenFood1,$GenFood2,$GenFood3,$dogf1, $dogf2, $dogf3,$catf1, $catf2, $catf3];
 
     foreach ($GenFood as $food) {
         echo '<div id="card">';
@@ -56,22 +60,6 @@ $catf3 = new Cibo_Per_Gatti("erba gatta", "Petxyness", "100% Erba gatta","7,50$"
         echo '</div>';
     }
     ?>
-
-    <div>
-        <?= "<h2>Cibo Per Gatti<h2>" ?>
-    </div>
-
-    <?php
-    $GenFood = [$catf1, $catf2, $catf3];
-
-    foreach ($GenFood as $food) {
-        echo '<div id="card">';
-        echo $food->getfood();
-        echo '</div>';
-    }
-    ?>
-
-
 
 </body>
 
