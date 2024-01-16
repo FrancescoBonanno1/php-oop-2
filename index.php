@@ -1,8 +1,10 @@
 <?php
 require __DIR__ . '/metods/data.php';
-$generictoy1 = new Giochi_Generici("Pallina Rimbalzina", "Giocattolo Rimbalzante", "P.L.U.", "Adatto a tutti i tipi di animali");
-$generictoy2 = new Giochi_Generici("Topolino di pezza", "Giocattolo di Tessuto", "Cotone 100%", "Adatto a tutti i tipi di animali");
-$generictoy3 = new Giochi_Generici("Pupazzo che scappa", "Giocattolo con carica a molla", "80% tessuto, plastica 20%", "Adatto a tutti i tipi di Animali");
+$generictoy1 = new Giochi_Generici("Pallina Rimbalzina", "Giocattolo Rimbalzante", "P.L.U.", "3,50$");
+$generictoy2 = new Giochi_Generici("Topolino di pezza", "Giocattolo di Tessuto", "Cotone 100%", "2,50$");
+$generictoy3 = new Giochi_Generici("Pupazzo che scappa", "Giocattolo con carica a molla", "80% tessuto, plastica 20%", "4$");
+$dogtoy1 = new Giochi_Per_Cani("Corda Dura", "Corda da tirare", "100% tessuto grezzo", "3,50$", "Adatto a tutti i tipi di Cane");
+$dogtoy2 = new Giochi_Per_Cani("Frisbee","Oggetto circolare da lancio","100% P.E.T.","4,50$","Adatto a tutti i tipi di Cane" );
 
 $dogf1 = new Cibo_Per_Cani("Polpettine di carne", "Petfood", "60% Manzo, 40% POllo", "Adatto ai cani di taglia Media/Grande");
 $dogf2 = new Cibo_Per_Cani("Bocconcini di pollo", "Friskas", "100% Pollo", "Adatto ai cani di taglia Media/Grande");
@@ -24,11 +26,11 @@ $catf3 = new Cibo_Per_Gatti("erba gatta", "Petxyness", "100% Erba gatta", "Adatt
 
 <body>
     <div>
-        <?= "<h2>Giochi Generici Per Animali<h2>" ?>
+        <?= "<h2>Giochi Per Animali<h2>" ?>
     </div>
 
     <?php
-    $generictoy = [$generictoy1, $generictoy2, $generictoy3];
+    $generictoy = [$generictoy1, $generictoy2, $generictoy3, $dogtoy1 , $dogtoy2];
 
     foreach ($generictoy as $toy) {
         echo '<div id="card">';
