@@ -23,17 +23,8 @@
 <?php class Giochi_Per_Cani extends Giochi_Generici
 {
     public $Suitable;
-    public function getgentoy()
-    {
-        $result = $this->Suitable;
-        return $result;
-    }
     public function __construct($Nome, $Tipo, $Materiale, $Prezzo, $Adatto)
-    {
-        $this->Name = $Nome;
-        $this->Type = $Tipo;
-        $this->Material = $Materiale;
-        $this->Price = $Prezzo;
+    {   parent::__construct($Nome, $Tipo, $Materiale, $Prezzo);
         $this->Suitable = $Adatto;
     }
 }
