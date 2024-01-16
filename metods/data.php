@@ -7,7 +7,7 @@
 
     public function getgentoy()
     {
-        $result = $this->Name . " " . $this->Type . " " .  $this->Material . " " .  $this->Price;
+        $result = $this->Name . "<br>" . $this->Type . "<br>" .  $this->Material . "<br>" .  $this->Price;
         return $result;
     }
 
@@ -61,7 +61,7 @@
 
         public function getfood()
         {
-            $result = $this->Type . " " . $this->Company . " " .  $this->Ingredients . " " .  $this->Price;
+            $result = $this->Type . "<br>" . $this->Company . "<br>" .  $this->Ingredients . "<br>" .  $this->Price;
             return $result;
         }
 
