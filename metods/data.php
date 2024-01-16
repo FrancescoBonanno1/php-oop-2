@@ -7,7 +7,7 @@
 
     public function getgentoy()
     {
-        $result = $this->Name . "<br> " . $this->Type . "<br> " .  $this->Material . "<br> " .  $this->Price ."<br>";
+        $result = $this->Name . " " . $this->Type . " " .  $this->Material . " " .  $this->Price;
         return $result;
     }
 
@@ -31,7 +31,7 @@
     public function getgentoy()
     {
         $Fathertoyinfo = parent::getgentoy();
-        $result = $Fathertoyinfo . $this->Suitable . "<br><br>";
+        $result = $Fathertoyinfo . $this->Suitable;
         return $result;
     }
 } ?>
@@ -46,7 +46,7 @@
     public function getgentoy()
     {
         $Fathertoyinfo = parent::getgentoy();
-        $result = $Fathertoyinfo . $this->Suitable . "<br><br>";
+        $result = $Fathertoyinfo . $this->Suitable;
         return $result;
     }
 } ?>
@@ -61,7 +61,7 @@
 
         public function getfood()
         {
-            $result = $this->Type . "<br> " . $this->Company . "<br> " .  $this->Ingredients . "<br> " .  $this->Price . "<br>";
+            $result = $this->Type . " " . $this->Company . " " .  $this->Ingredients . " " .  $this->Price;
             return $result;
         }
 
@@ -85,7 +85,7 @@
     public function getfood()
     {
         $Fatherfoodinfo = parent::getfood();
-        $result = $Fatherfoodinfo . $this->For . "<br><br>";
+        $result = $Fatherfoodinfo . $this->For;
         return $result;
     }
 } ?>
@@ -101,7 +101,7 @@
     public function getfood()
     {
         $Fatherfoodinfo = parent::getfood();
-        $result = $Fatherfoodinfo . $this->For . "<br><br>";
+        $result = $Fatherfoodinfo . $this->For;
         return $result;
     }
 } ?>
