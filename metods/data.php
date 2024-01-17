@@ -1,5 +1,6 @@
 <?php class Giochi_Generici
 {
+    public $image;
     public $Name;
     public $Type;
     public $Material;
@@ -7,12 +8,12 @@
 
     public function getgentoy()
     {
-        $result = $this->Name . "<br>" . $this->Type . "<br>" .  $this->Material . "<br>" .  $this->Price;
+        $result =$this->image . "<img src='" . $this->Name . "<br>" . $this->Type . "<br>" .  $this->Material . "<br>" .  $this->Price;
         return $result;
     }
 
-    public function __construct($Nome, $Tipo, $Materiale, $Prezzo)
-    {
+    public function __construct($immagine, $Nome, $Tipo, $Materiale, $Prezzo)
+    {   $this->image = $immagine;
         $this->Name = $Nome;
         $this->Type = $Tipo;
         $this->Material = $Materiale;
@@ -23,9 +24,9 @@
 <?php class Giochi_Per_Cani extends Giochi_Generici
 {
     public $Suitable;
-    public function __construct($Nome, $Tipo, $Materiale, $Prezzo, $Adatto)
+    public function __construct($immagine,$Nome, $Tipo, $Materiale, $Prezzo, $Adatto)
     {
-        parent::__construct($Nome, $Tipo, $Materiale, $Prezzo);
+        parent::__construct($immagine,$Nome, $Tipo, $Materiale, $Prezzo);
         $this->Suitable = $Adatto;
     }
     public function getgentoy()
@@ -38,9 +39,9 @@
 <?php class Giochi_Per_Gatti extends Giochi_Generici
 {
     public $Suitable;
-    public function __construct($Nome, $Tipo, $Materiale, $Prezzo, $Adatto)
+    public function __construct($immagine,$Nome, $Tipo, $Materiale, $Prezzo, $Adatto)
     {
-        parent::__construct($Nome, $Tipo, $Materiale, $Prezzo);
+        parent::__construct($immagine,$Nome, $Tipo, $Materiale, $Prezzo);
         $this->Suitable = $Adatto;
     }
     public function getgentoy()
