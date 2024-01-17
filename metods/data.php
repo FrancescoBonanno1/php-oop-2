@@ -8,7 +8,7 @@
 
     public function getgentoy()
     {
-        $result =$this->image . "<img src='" . $this->Name . "<br>" . $this->Type . "<br>" .  $this->Material . "<br>" .  $this->Price;
+        $result = $this->image . "<img src='' alt=''>" . $this->Name . "<br>" . $this->Type . "<br>" .  $this->Material . "<br>" .  $this->Price;
         return $result;
     }
 

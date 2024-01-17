@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/metods/data.php';
-$generictoy1 = new Giochi_Generici("img/pallina-rimbalzina-gigante.jpg","Pallina Rimbalzina", "Giocattolo Rimbalzante", "P.L.U.", "3,50$");
+$generictoy1 = new Giochi_Generici("img\pallina-rimbalzina-gigante.jpg","Pallina Rimbalzina", "Giocattolo Rimbalzante", "P.L.U.", "3,50$");
 $generictoy2 = new Giochi_Generici("","Topolino di pezza", "Giocattolo di Tessuto", "Cotone 100%", "2,50$");
 $generictoy3 = new Giochi_Generici("","Pupazzo che scappa", "Giocattolo con carica a molla", "80% tessuto, plastica 20%", "4$");
 
@@ -61,7 +61,6 @@ $catf3 = new Cibo_Per_Gatti("erba gatta", "Petxyness", "100% Erba gatta", "7,50$
             echo '</div>';
         }
         ?>
-        <img src="img/pallina-rimbalzina-gigante.jpg" alt="">
     </div>
 
 </body>
